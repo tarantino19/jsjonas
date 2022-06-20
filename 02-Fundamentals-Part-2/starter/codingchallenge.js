@@ -64,4 +64,71 @@ const total = [bills [0] + tips [0], bills [1] + tips [1], bills [2] + tips [2] 
 
 console.log (bills, tips, total);
 
+// coding challenge 3 object, method.
+
+const mark = {
+    fullName: `Mark Miller`,
+    mass: 78,
+    height: 1.69,
+    calcBMI: function ()  {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+};
+ // I'm almost right the first time - just needed to put one calcbmi formula below each const and then use this.mass instead of mark.mass
+
+const john = {
+    fullName: `John Smith`,
+    mass: 92,
+    height: 1.95,
+    calcBMI: function ()  {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+};
+
+mark.calcBMI ();
+console.log (mark.bmi);
+
+john.calcBMI ();
+console.log (john.bmi);
+
+if (mark.bmi > john.bmi) {
+    console.log (`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi}) `);
+} else if (john.bmi > mark.bmi) {
+    console.log (`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi}) `);
+};
+
+//CODING CHALLENGE #4
+
+let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let tips = [];
+let totals = [];
+
+const calcTip = function (bill) {
+   return bill >= 50  &&  bill <= 300 ? bill * 0.15 : bill * 0.2
+}
+
+for (let i= 0 ; i < bills.length ; i++) {
+    let tip = calcTip (bills [i]);
+    tips.push (tip);
+    totals.push (tip + bills [i]);
+}
+
+console.log (bills, tips, totals);
+
+const calcAverage = function (arr) {
+    let sum = 0;
+    for (let i = 0 ; i < arr.length ; i++) {
+        // sum = sum + arr [i];
+        sum += arr[i];
+    }
+    return sum / arr.length;
+};
+calcAverage ([2, 3, 6]);
+
+console.log (calcAverage([2,3,7]));
+console.log (calcAverage(totals));
+console.log (calcAverage(tips));
+
 */

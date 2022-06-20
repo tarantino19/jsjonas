@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 // activating strict mode
 
 // FUNCTIONS assignment
@@ -119,10 +119,112 @@ console.log (myCountry);
 console.log (`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, 3 neighbouring countries ${myCountry.neighbours} and a capital called ${myCountry.capital}`);
 
 myCountry.population = (2 + myCountry.population);
+// or myCountry.population += 2;
 
-console.log (`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, 3 neighbouring countries ${myCountry.neighbours} and a capital called ${myCountry.capital}`);
+console.log (`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people,${myCountry.neighbours.length} neighbouring countries like ${myCountry.neighbours} and a capital called ${myCountry.capital}`);
+
+// or   console.log(
+//   `${myCountry.country} has ${myCountry.population} million
+//   ${myCountry.language}-speaking people,
+//   ${myCountry.neighbours.length} neighbouring countries and
+//   a capital called ${myCountry.capital}.`
+// );
 
 myCountry [`population`] = (myCountry [`population`] - 2);
+// or myCountry [`population`] -= 2;
 
 console.log (`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, 3 neighbouring countries ${myCountry.neighbours} and a capital called ${myCountry.capital}`);
+
+//object methods
+
+
+const myCountry2 = {
+    country: `Philippines`,
+    capital: `Manila`,
+    language: `filipino`,
+    population: 107,
+    neighbours: [`Vietnam`, `India`, `Brunei`],
+
+
+describe: function () {
+    console.log (
+        `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries like ${this.neighbours} and a capital called ${this.capital}`
+        );
+},
+
+checkIsland: function () {
+    this.isIsland = this.neighbours.length === 0 ? true : false;
+}
+
+};
+
+myCountry2.describe();
+myCountry2.checkIsland();
+console.log(myCountry2);
+
+
+//The for loop - allows us to automateb repetitive tasks
+
+for (let votes = 1 ; votes <= 50 ; votes ++) {
+    console.log (`Voter number ${votes} is currently voting`)
+
+//assignment for break continue
+
+const populationNew = [107, 350, 273, 30];
+const percentages2 = [];
+
+for (let i = 0 ; i < populationNew.length ; i++ ) {
+    const perc = percentageOfWorld1(populationNew[i]);
+    percentages2.push(perc);
+    }
+console.log (percentages2);
+};
+
+// const listOfNeighbours = [
+//     `Canada`,
+//     `Mexico`,
+//     `Spain`,
+//     `Norway`,
+//     `Sweden`,
+//     `Russia`
+// ];
+
+// for (let i = 0 ; i < listOfNeighbours.length  ;  i++ ) {
+//     console.log (`Neighbour: ${listOfNeighbours} [i]`);
+// };
+
+//answer
+
+const listOfNeighbours = [ ['Canada', 'Mexico'], ['Spain'],
+['Norway', 'Sweden', 'Russia'],
+];
+for (let i = 0; i < listOfNeighbours.length; i++)
+for (let y = 0; y < listOfNeighbours[i].length; y++)
+    console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
+
+// 
+
+//the while loop
+
+// const populationNew = [107, 350, 273, 30];
+// const percentages2 = [];
+
+// for (let i = 0 ; i < populationNew.length ; i++ ) {
+//     const perc = percentageOfWorld1(populationNew[i]);
+//     percentages2.push(perc);
+//     }
+// console.log (percentages2);
+// };
+
+let percentages3= [];
+let i = 0;
+for (let i = 0 ; i < populations.length ; i++ ) {
+    const perc = percentageOfWorld1(populations[i]);
+    percentages3.push(perc);
+    i++;
+    };
+
+    console.log (percentages3);
+*/
+
 
